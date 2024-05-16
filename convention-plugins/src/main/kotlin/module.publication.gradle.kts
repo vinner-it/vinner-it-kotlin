@@ -15,7 +15,8 @@ publishing {
             archiveClassifier.set("javadoc")
             archiveAppendix.set(this@withType.name)
         })
-
+        //NOT SURE IF ARTIFACT ID IS REQUIRED.
+        //artifactId = "vinner-it-kotlin"
         // Provide artifacts information required by Maven Central
         pom {
             name.set("Open source VIN validation library")
