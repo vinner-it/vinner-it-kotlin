@@ -1,4 +1,3 @@
-import com.vanniktech.maven.publish.JavadocJar
 import com.vanniktech.maven.publish.KotlinMultiplatform
 import com.vanniktech.maven.publish.SonatypeHost
 
@@ -32,7 +31,6 @@ mavenPublishing {
     )
     configure(
         KotlinMultiplatform(
-            JavadocJar.None(),
             sourcesJar = true,
         )
     )
