@@ -4,26 +4,11 @@ import com.vanniktech.maven.publish.SonatypeHost
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
-    //alias(libs.plugins.androidLibrary)
-    id("module.publication")
     id("com.vanniktech.maven.publish") version "0.28.0"
 }
 
 kotlin {
-    targetHierarchy.default()
     jvm()
-    /*androidTarget {
-        publishLibraryVariants("release")
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "1.8"
-            }
-        }
-    }*/
-    //iosX64()
-    //iosArm64()
-    //iosSimulatorArm64()
-    //linuxX64()
 
     sourceSets {
         val commonMain by getting {
@@ -39,29 +24,14 @@ kotlin {
     }
 }
 
-/*
-android {
-    namespace = "io.github.vinner-it"
-    compileSdk = libs.versions.android.compileSdk.get().toInt()
-    defaultConfig {
-        minSdk = libs.versions.android.minSdk.get().toInt()
-    }
-}
-*/
-
 mavenPublishing {
     coordinates(
         groupId = "io.github.vinner-it",
         artifactId = "vinner-it-kotlin",
-        version = "1.0.0"
+        version = "1.1.0"
     )
     configure(
         KotlinMultiplatform(
-            // configures the -javadoc artifact, possible values:
-            // - `JavadocJar.None()` don't publish this artifact
-            // - `JavadocJar.Empty()` publish an emprt jar
-            // - `JavadocJar.Javadoc()` to publish standard javadocs
-            // whether to publish a sources jar
             JavadocJar.None(),
             sourcesJar = true,
         )
