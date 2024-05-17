@@ -18,6 +18,8 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(libs.kotlin.test)
+                implementation("org.assertj:assertj-core:3.25.3")
+
             }
         }
     }
@@ -27,7 +29,7 @@ mavenPublishing {
     coordinates(
         groupId = "io.github.vinner-it",
         artifactId = "vinner-it-kotlin",
-        version = "1.1.0"
+        version = "1.1.1"
     )
     configure(
         KotlinMultiplatform(

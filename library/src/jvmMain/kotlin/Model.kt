@@ -1,5 +1,5 @@
-sealed interface Vin
+sealed interface BaseVin
 
-data class ValidVin(val value: String) : Vin
+data class Vin internal constructor(val value: String) : BaseVin
 
-data class InvalidVin(val value: String) : Vin
+data class InvalidVin internal constructor(val value: String, val message: String) : BaseVin
