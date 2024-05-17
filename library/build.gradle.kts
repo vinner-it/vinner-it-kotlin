@@ -29,7 +29,7 @@ mavenPublishing {
     coordinates(
         groupId = "io.github.vinner-it",
         artifactId = "vinner-it-kotlin",
-        version = "1.1.1"
+        version = "1.1.2"
     )
     configure(
         KotlinMultiplatform(
